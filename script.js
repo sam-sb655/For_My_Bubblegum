@@ -2,6 +2,7 @@ const canvas = document.getElementById("gameCanvas");
 const ctx = canvas.getContext("2d");
 const message = document.getElementById("message");
 const restartBtn = document.getElementById("restart");
+const scoreDisplay = document.getElementById("score");
 
 canvas.width = 400;
 canvas.height = 500;
@@ -35,22 +36,8 @@ function createStars() {
 }
 
 function drawSunflower() {
-  // Draw sunflower center
-  ctx.fillStyle = "#ffcc00";
-  ctx.beginPath();
-  ctx.arc(sunflower.x, sunflower.y, sunflower.size, 0, Math.PI * 2);
-  ctx.fill();
-
-  // Draw petals
-  ctx.fillStyle = "#ffdd44";
-  for (let i = 0; i < 12; i++) {
-    let angle = (Math.PI * 2 * i) / 12;
-    let petalX = sunflower.x + Math.cos(angle) * (sunflower.size + 10);
-    let petalY = sunflower.y + Math.sin(angle) * (sunflower.size + 10);
-    ctx.beginPath();
-    ctx.arc(petalX, petalY, 10, 0, Math.PI * 2);
-    ctx.fill();
-  }
+  ctx.font = "30px Arial";
+  ctx.fillText("🌻", sunflower.x - 15, sunflower.y + 10);
 }
 
 function drawObstacles() {
@@ -76,11 +63,10 @@ function drawObstacles() {
 }
 
 function drawStars() {
+  ctx.font = "20px Arial";
   ctx.fillStyle = "#ffffff";
   stars.forEach((star) => {
-    ctx.beginPath();
-    ctx.arc(star.x, star.y, star.size, 0, Math.PI * 2);
-    ctx.fill();
+    ctx.fillText("⭐", star.x - 5, star.y + 5);
     star.y += 2;
 
     if (star.y > canvas.height) {
@@ -95,6 +81,7 @@ function drawStars() {
     ) {
       stars.splice(stars.indexOf(star), 1);
       starCount++;
+      scoreDisplay.textContent = starCount;
     }
   });
 }
@@ -124,6 +111,7 @@ function restartGame() {
   obstacles = [];
   stars = [];
   starCount = 0;
+  scoreDisplay.textContent = starCount;
   gameOver = false;
   message.style.display = "none";
   restartBtn.style.display = "none";
