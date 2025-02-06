@@ -1,45 +1,52 @@
 body {
-    text-align: center;
-    font-family: "Arial", sans-serif;
-    background-color: #0b132b; /* Deep blue night sky */
-    color: white;
-  }
-  
-  .game-container {
-    margin-top: 20px;
-  }
-  
-  canvas {
-    border: 3px solid #ff4d6d;
-    background-color: #000; /* Dark background for night theme */
-    box-shadow: 0px 0px 15px rgba(255, 77, 109, 0.6);
-    border-radius: 10px;
-  }
-  
-  #message {
-    font-size: 22px;
-    font-weight: bold;
-    color: #ffcc00;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-    display: none;
-  }
-  
-  #restart {
-    margin-top: 15px;
-    padding: 12px 20px;
-    font-size: 18px;
-    border: none;
-    background-color: #ff4d6d;
-    color: white;
-    border-radius: 8px;
-    cursor: pointer;
-    box-shadow: 0px 5px 10px rgba(255, 77, 109, 0.4);
-    transition: background 0.3s, transform 0.2s;
-    display: none;
-  }
-  
-  #restart:hover {
-    background-color: #d6336c;
-    transform: scale(1.05);
-  }
-  
+  text-align: center;
+  font-family: "Arial", sans-serif;
+  background-color: #0b132b; /* Deep blue night sky */
+  color: white;
+}
+
+.game-container {
+  margin-top: 20px;
+}
+
+canvas {
+  border: 3px solid #ff4d6d;
+  background-color: #000; /* Dark background for night theme */
+  box-shadow: 0px 0px 15px rgba(255, 77, 109, 0.6);
+  border-radius: 10px;
+}
+
+#scoreboard {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 10px;
+  color: #ffcc00;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+#message {
+  font-size: 22px;
+  font-weight: bold;
+  color: #ffcc00;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  display: none;
+}
+
+#restart {
+  margin-top: 15px;
+  padding: 12px 20px;
+  font-size: 18px;
+  border: none;
+  background-color: #ff4d6d;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0px 5px 10px rgba(255, 77, 109, 0.4);
+  transition: background 0.3s, transform 0.2s;
+  display: none;
+}
+
+#restart:hover {
+  background-color: #d6336c;
+  transform: scale(1.05);
+}
