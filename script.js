@@ -101,7 +101,7 @@ function update() {
 
 function showMessage() {
   message.textContent =
-    "Happy Valentine’s Day, Anushaa! ❤️ Will you be the Bubblegum of your Sunflower?";
+    "On this Valentine’s Day, Anushaa✨, Will you be the Valentine Bubblegum of your Silly Sunflower?💛";
   message.style.display = "block";
   restartBtn.style.display = "block";
 }
